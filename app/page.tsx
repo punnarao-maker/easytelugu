@@ -2,9 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 
-// Telugu vowels
+
 const vowels = ["అ", "ఆ", "ఇ", "ఈ", "ఉ", "ఊ", "ఋ", "ౠ", "ఎ", "ఏ", "ఐ", "ఒ", "ఓ", "ఔ", "అం", "అః"];
-// Telugu consonants
+
 const consonants = [
   "క", "ఖ", "గ", "ఘ", "ఙ",
   "చ", "ఛ", "జ", "ఝ", "ఞ",
@@ -79,7 +79,7 @@ export default function Home() {
 
     // Calculate the scaling factor to fit the letter within a target area,
     // ensuring a margin and keeping it proportional.
-    const targetWidth = canvas.width * 0.6; // Aim to fill 80% of the screen width
+    const targetWidth = canvas.width * 0.7; // Aim to fill 80% of the screen width
     const targetHeight = canvas.height * 0.6; // Aim to fill 80% of the screen height
 
     const scaleX = targetWidth / letterWidth;
