@@ -3,9 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 
 
-const vowels = ["అ", "ఆ", "ఇ", "ఈ", "ఉ", "ఊ", "ఋ", "ౠ", "ఎ", "ఏ", "ఐ", "ఒ", "ఓ", "ఔ", "అం", "అః"];
+export const vowels = ["అ", "ఆ", "ఇ", "ఈ", "ఉ", "ఊ", "ఋ", "ౠ", "ఎ", "ఏ", "ఐ", "ఒ", "ఓ", "ఔ", "అం", "అః"];
 
-const consonants = [
+export const consonants = [
   "క", "ఖ", "గ", "ఘ", "ఙ",
   "చ", "ఛ", "జ", "ఝ", "ఞ",
   "ట", "ఠ", "డ", "ఢ", "ణ",
