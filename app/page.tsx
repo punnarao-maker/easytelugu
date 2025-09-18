@@ -73,9 +73,9 @@ export default function Home() {
     ctx.textBaseline = "middle";
 
     // Measure the text to get its actual width and height
-    let metrics = ctx.measureText(letter);
-    let letterWidth = metrics.width;
-    let letterHeight = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent; // More accurate height
+    const metrics = ctx.measureText(letter);
+    const letterWidth = metrics.width;
+    const letterHeight = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent; // More accurate height
 
     // Calculate the scaling factor to fit the letter within a target area,
     // ensuring a margin and keeping it proportional.
@@ -115,12 +115,12 @@ export default function Home() {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
     return () => window.removeEventListener("resize", resizeCanvas);
-  }, []);
+  }, [resizeCanvas]);
 
   // redraw when letter changes
   useEffect(() => {
     drawBackground(); // Changed from resizeCanvas to directly drawBackground
-  }, [index, category, letter]); // Depend on 'letter' as well
+  }, [index, category, letter , drawBackground]); // Depend on 'letter' as well
 
   // Update line width when the state changes
   useEffect(() => {
