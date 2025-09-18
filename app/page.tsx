@@ -156,10 +156,14 @@ export default function Home() {
     const ctx = ctxRef.current;
     if (!ctx) return;
     const { x, y } = getXY(e);
-    ctx.beginPath();
-    ctx.moveTo(x, y);
+
+
+   
     ctx.strokeStyle = color; // Set stroke style when starting
     ctx.lineWidth = lineWidth; // Set line width when starting
+
+     ctx.beginPath();
+    ctx.moveTo(x, y);
   };
 
   const endDrawing = () => {
@@ -172,12 +176,14 @@ export default function Home() {
     const ctx = ctxRef.current;
     if (!ctx) return;
     const { x, y } = getXY(e);
+
+
     ctx.lineTo(x, y);
     ctx.stroke();
     // To create a continuous stroke, we don't call beginPath() and moveTo() here.
     // Instead, we move the "pen" to the new position for the next line segment.
-    ctx.beginPath(); // Start a new path segment to avoid connecting unrelated strokes
-    ctx.moveTo(x, y);
+    //ctx.beginPath(); // Start a new path segment to avoid connecting unrelated strokes
+    //ctx.moveTo(x, y);
   };
 
   const clearCanvas = () => drawBackground();
