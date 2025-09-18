@@ -115,12 +115,12 @@ export default function Home() {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
     return () => window.removeEventListener("resize", resizeCanvas);
-  }, [resizeCanvas]);
+  }, []);
 
   // redraw when letter changes
   useEffect(() => {
     drawBackground(); // Changed from resizeCanvas to directly drawBackground
-  }, [index, category, letter , drawBackground]); // Depend on 'letter' as well
+  }, [index, category, letter ]); // Depend on 'letter' as well
 
   // Update line width when the state changes
   useEffect(() => {
